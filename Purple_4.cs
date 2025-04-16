@@ -8,21 +8,10 @@ namespace Lab_8
 {
     public class Purple_4 : Purple
     {
-        string _output;
+        private string _output;
         private (string, char)[] _codes;
 
         public string Output => _output;
-
-        public (string, char)[] Codes 
-        {
-            get
-            {
-                if (_codes == null) return null;
-                (string, char)[] codes = new (string, char)[_codes.Length];
-                Array.Copy(_codes, codes, codes.Length);
-                return codes;
-            }
-        }
 
         public Purple_4 (string input, (string, char)[] codes) : base(input)
         {
